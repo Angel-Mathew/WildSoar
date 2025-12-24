@@ -1,0 +1,168 @@
+.upload{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;  
+
+}
+.uploadingbox{
+   background-image: url("/public/uploadsimg.png");
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-color: transparent;
+   border:none;
+   width: 700px;
+   height: 550px;
+   padding: 60px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+}
+.close_btn{
+    position: absolute;
+    top: 120px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    z-index:10;
+}
+.close_btn:hover{
+    transform: scale(1.2);
+
+}
+.upload_form{
+   width:60%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   align-items: center;
+   justify-content: center;
+   margin-top: 20px;
+
+}
+.content_area{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+    width: 100%;
+}
+
+.text_input{
+    width:100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0.2);
+    color:white;
+    min-height: 80px;
+   font-family:Arial, sans-serif ;
+    
+    
+
+}
+.text_input::placeholder{
+    color: #e0e0e0;
+}
+.upload_btn{
+    background-color:transparent;
+  border-radius:50px ;
+    padding:15px 20px;
+     font-family: 'Sail', cursive;
+     color: #fb9e09;;
+    cursor: pointer;
+    border:none;
+    font-size: 2em;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+   
+    margin-top: -20px;
+    margin-left: -10px;
+}
+.upload_btn:hover{
+    background-color: #ffffff;
+    transform: scale(1.05);
+}
+/*---------------------- media quires -------------------------*/
+ /* ------------------- small mobile -------------------------*/
+@media (min-width: 320px) and (max-width: 480px){
+    .uploadingbox{
+ 
+   width: 150px;
+   height: 150px;
+   padding: 60px;
+   display: flex;
+  
+}
+.upload_btn{
+   font-size: 20px;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+    margin-top: -20px;
+    margin-left: -10px;
+}
+.close_btn{
+    position: absolute;
+    top: 65px;
+    right: 8px;
+    background: none;
+    border: none;
+    font-size: 10px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    z-index:10;
+}
+.text_input{
+    width:90%;
+    padding: 10px;
+   font-size: 8px;
+   min-height: 10px;
+}
+
+}
+
+/* -------------------- tablet ----------------------------*/
+ @media (min-width:768px) and (max-width:1024px){
+    .uploadingbox{
+   width: 400px;
+   height: 300px;
+   padding: 60px;
+   display: flex;
+  
+}
+.close_btn{
+    top: 65px;
+    right: 8px;
+    font-size: 20px;
+}
+ }
+ /*----------------------- Laptop ---------------------------------*/
+  @media (min-width:1024px) and (max-width:1439px){
+ .uploadingbox{
+    margin-top: 150px;
+   width: 400px;
+   height: 300px;
+   padding: 60px;
+   display: flex;
+}
+.close_btn{
+    top: 75px;
+    right: 8px;
+    font-size: 20px;
+}
+  }
