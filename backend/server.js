@@ -82,7 +82,7 @@ app.post('/google-signin', async (req, res) => {
         }
         const fileType = req.file.mimetype.startsWith('video') ? 'video': 'image';
 
-        const fileUrl = `http://localhost:5000/uploads/${req.file.filename}`;
+        const fileUrl = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
 
         const newPost = new Post({
             caption: req.body.caption,
@@ -127,4 +127,5 @@ app.post('/upload-text', async (req, res) => {
             res.status(500).json({ message: 'Error deleting post' });
         }
     });
-    app.listen(5000,() => console.log('Server running on port 5000'));
+   const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
