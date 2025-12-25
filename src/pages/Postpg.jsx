@@ -10,7 +10,7 @@ const Postpg = () =>{
     useEffect(() => {
         const fetchPosts = async() => {
             try{
-                const res =await fetch('https://wildsoar.onrender.com');
+                const res = await fetch('https://wildsoar.onrender.com/posts');;
                 const data = await res.json();
                 setPosts(data);
             } catch (error){
