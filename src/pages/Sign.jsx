@@ -21,7 +21,7 @@ const [formData, setFormData] = useState({
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-      const res = await fetch(' https://wildsoar.onrender.com',{
+     const res = await fetch('https://wildsoar.onrender.com/signup',{
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const [formData, setFormData] = useState({
         const userInfo = await userInfoRes.json();
         setUser(userInfo);
 
-        await fetch(' https://wildsoar.onrender.com',{
+      await fetch('https://wildsoar.onrender.com/google-signin',{
           method: "POST",
           headers: {"Content-Type": "application/json"},
           body: JSON.stringify({
