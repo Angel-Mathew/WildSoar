@@ -12,7 +12,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: [
+        "https://wild-soar.vercel.app", 
+        "https://wild-soar-ba0dowkbh-angel-mathews-projects.vercel.app" 
+    ],
+    credentials: true
+}));
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
@@ -82,7 +88,7 @@ app.post('/google-signin', async (req, res) => {
         }
         const fileType = req.file.mimetype.startsWith('video') ? 'video': 'image';
 
-        const fileUrl = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
+        const fileUrl = `https://wildsoar.onrender.com/uploads/${req.file.filename}`;
 
         const newPost = new Post({
             caption: req.body.caption,
