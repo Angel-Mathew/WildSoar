@@ -14,7 +14,7 @@ const Journey = () => {
   /*--------  Text ----------------*/
   if (uploadData.type === "text"){
    try{
-    const res = await fetch('http://localhost:5000/upload-text',{
+    const res = await fetch('https://wildsoar.onrender.com/upload-text',{
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ const Journey = () => {
   const formData = new FormData();
   formData.append('file',uploadData.file);
   try{
-    const res = await fetch('http://localhost:5000/upload',{
+    const res = await fetch('https://wildsoar.onrender.com/upload',{
       method: "POST",
       body: formData,
     });

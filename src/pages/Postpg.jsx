@@ -10,7 +10,7 @@ const Postpg = () =>{
     useEffect(() => {
         const fetchPosts = async() => {
             try{
-                const res =await fetch('http://localhost:5000/posts');
+                const res =await fetch('https://wildsoar.onrender.com');
                 const data = await res.json();
                 setPosts(data);
             } catch (error){
@@ -24,7 +24,7 @@ const Postpg = () =>{
     const handleDelete = async (id) => {
         if (window.confirm("Do you want to delete this post?")) {
             try{
-        const res = await fetch(`http://localhost:5000/posts/${id}`,{
+        const res = await fetch(`https://wildsoar.onrender.com/posts/${id}`,{
             method: "DELETE",
         });
         if (res.ok){
