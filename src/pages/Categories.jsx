@@ -25,8 +25,8 @@ const Categories = () => {
  const [showPopup,setShowPopup]=useState(false) 
  const [filteredData, setFilteredData] = useState({});
 /*-------------- In this the selected categories living being displayed --------------*/
-/* meaning in home page there is four main category "Animals","Reptiles","Fishes" and "Birds" so if animals is selected it will filter ---------*/
-/* the data and display the animal if not everything will be shown-----------*/
+/* -------meaning in home page there is four main category "Animals","Reptiles","Fishes" and "Birds" so if animals is selected,it will displays only animals  ---------*/
+/* if user wants to see all livingbeing in one page then click categories navlink which is on header-----------*/
 
  useEffect(()=>{
   if (categoryName && livingbeingdata[categoryName]){

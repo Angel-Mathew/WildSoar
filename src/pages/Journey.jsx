@@ -6,8 +6,8 @@ import UploadSection from './UploadSection.jsx';
 
 /* --------- Journey -------------- */
 const Journey = () => {
-  const [showUploadBox, setShowUploadBox] = useState(false); /*--- upload popup ---*/
-  const [currentUploadType, setCurrentUploadType] = useState('image');/*--- checks what type of content is bein upload ----*/
+  const [showUploadBox, setShowUploadBox] = useState(false); 
+  const [currentUploadType, setCurrentUploadType] = useState('image');
   const navigate = useNavigate();
 
   const handleNewUpload = async (uploadData) => {
@@ -78,7 +78,7 @@ const Journey = () => {
           </div>
       </div>
     </div>
-      {/*-----------Media upload Buttons such as camera btn,video btn and text btn -----------------*/ }
+      {/*----------- Upload Buttons -----------------*/ }
       <div className="pg_content">
       <div className="upload_section ">
         
@@ -90,7 +90,7 @@ const Journey = () => {
 
        
       </div>
-      {/*-------------------- upload function and close function -------------------*/ }
+      
       {showUploadBox && (
         <UploadSection
         onUpload={handleNewUpload}
@@ -98,7 +98,7 @@ const Journey = () => {
         uploadType={currentUploadType}
         />
       )}
-      {/* ------------- post section which is hidden currently. Onces content is uploaded,the user is directed to post page to view the post -------------- */ }
+      
       <div className="posts_section" style={{display:'none'}}>
         </div>
         </div>
